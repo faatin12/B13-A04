@@ -44,8 +44,9 @@ const interviewStat = document.getElementById("stat-interview");
 const rejectStat = document.getElementById("stat-reject");
 
 totalStat.innerText = allContainer.children.length;
+
 switchTab(currentTab);
 
-document.getElementById("jobs-container").addEventListener("click",function (event) {
-    console.log(event)
+document.getElementById("jobs-container").addEventListener("click", function(event) {
+    console.log(event.target);
 })
