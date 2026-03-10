@@ -25,3 +25,4 @@ useful for Memory Efficiency and Dynamic Content.
 5. What is the difference between preventDefault() and stopPropagation() methods?
 ans:
 preventDefault(): Stops the browser's default behavior and stopPropagation(): Stops the event from bubbling further.
+
