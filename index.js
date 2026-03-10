@@ -5,7 +5,9 @@ const tabInactive = ["bg-transparent", "text-slate-700", "border-state-200", "te
 const allContainer = document.getElementById("all-container");
 const interviewContainer = document.getElementById("interview-container");
 const rejectedContainer = document.getElementById("reject-container");
-console.log(allContainer, interviewContainer,rejectedContainer)
+const emptyStat = document.getElementById("empty-state");
+//console.log(allContainer, interviewContainer,rejectedContainer)
+
 
 function switchTab(tab){
 console.log(tab);
@@ -27,6 +29,8 @@ const pages = [allContainer, interviewContainer, rejectedContainer];
 for( const section of pages){
     section.classList.add("hidden")
 }
+
+//emptyStat.classList.add("hidden");
 
 if (tab ==="all") {
     allContainer.classList.remove("hidden");
