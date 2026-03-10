@@ -56,12 +56,22 @@ document.getElementById("jobs-container").addEventListener("click", function(eve
   if (clickedEliment.classList.contains("interview")){
     status.innerText = "Interviewed";
    interviewContainer.appendChild(card);
+   updateStat();
   }
 if (clickedEliment.classList.contains("rejected")){
     status.innerText = "Rejected";
     rejectedContainer.appendChild(card);
+    updateStat();
   }
 if (clickedEliment.classList.contains("delete")){
     parent.removeChild(card);
+    updateStat();
   }
 })
+
+function updateStat() {
+    totalStat.innerText = allContainer.children.length;
+    interviewStat.innerText = interviewContainer.children.length;
+    rejectStat.innerText = rejectedContainer.children.length;
+}
+updateStat();
