@@ -48,5 +48,15 @@ totalStat.innerText = allContainer.children.length;
 switchTab(currentTab);
 
 document.getElementById("jobs-container").addEventListener("click", function(event) {
-    console.log(event.target);
+  const clickedEliment = event.target;
+  //console.log(clickedEliment);
+  if (clickedEliment.classList.contains("interview")){
+    console.log("interview clicked")
+  }
+if (clickedEliment.classList.contains("rejected")){
+    console.log("rejected clicked")
+  }
+if (clickedEliment.classList.contains("delete")){
+    console.log("delete clicked")
+  }
 })
