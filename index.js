@@ -43,20 +43,25 @@ const totalStat = document.getElementById("stat-total");
 const interviewStat = document.getElementById("stat-interview");
 const rejectStat = document.getElementById("stat-reject");
 
-totalStat.innerText = allContainer.children.length;
+//totalStat.innerText = allContainer.children.length;
 
 switchTab(currentTab);
 
 document.getElementById("jobs-container").addEventListener("click", function(event) {
   const clickedEliment = event.target;
-  //console.log(clickedEliment);
+  const card = clickedEliment.closest(".card");
+  const parent = card.parentNode;
+  const status = card.querySelector(".status");
+
   if (clickedEliment.classList.contains("interview")){
-    console.log("interview clicked")
+    status.innerText = "Interviewed";
+   interviewContainer.appendChild(card);
   }
 if (clickedEliment.classList.contains("rejected")){
-    console.log("rejected clicked")
+    status.innerText = "Rejected";
+    rejectedContainer.appendChild(card);
   }
 if (clickedEliment.classList.contains("delete")){
-    console.log("delete clicked")
+    parent.removeChild(card);
   }
 })
